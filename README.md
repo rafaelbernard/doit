@@ -42,3 +42,8 @@ Updated tools to 01ec2ef (2016-03-30 16:20:30 -0700)
 ```
 
 `magic-cli-update` provides a starting point for you to use for your own updater. If you're hosting your tools in a git repository, customizing this script just entails modifying the `SOURCE_REPO` constant at the top of the file. If your needs are more complex, you can replace the `fetch_latest_code!` and `get_version_info` methods.
+
+### Inspiracao
+
+https://github.com/slackhq/magic-cli
+https://slack.engineering/the-joy-of-internal-tools-4a1bb5fe905b#.fi5lnlxnk
