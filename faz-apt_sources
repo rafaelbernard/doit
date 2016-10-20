@@ -1,3 +1,4 @@
 #!/usr/bin/sh
 
+cd
 ls /etc/apt/sources.list.d/
