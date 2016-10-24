@@ -1,0 +1,7 @@
+#!/bin/sh
+echo '/home/informatica'
+sshfs rafael@centauro:/home/informatica /home/rafael/centauro/informatica
+echo '/home/rafael'
+sshfs rafael@centauro:/home/rafael /home/rafael/centauro/rafael
+echo '/home/public'
+sshfs -o default_permissions rafael@centauro:/home/public /home/rafael/centauro/public
