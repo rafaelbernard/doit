@@ -1,0 +1,4 @@
+#!/bin/sh
+
+cd /etc/apt/sources.list.d/
+ls -la
