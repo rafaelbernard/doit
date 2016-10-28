@@ -1,4 +1,9 @@
 #!/bin/sh
 
+release = $(lsb-release)
+echo 'release'
+echo release
+
 cd /etc/apt/sources.list.d/
 ls -la
+ack-grep 'xenial'
