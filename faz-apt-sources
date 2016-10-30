@@ -1,7 +1,7 @@
 #!/bin/sh
 
-release = $(lsb-release)
-echo 'release'
+release = $('cat /etc/lsb-release | grep "CODENAME"')
+echo 'release: '
 echo release
 
 cd /etc/apt/sources.list.d/
