@@ -6,6 +6,6 @@ cd bd-bck
 pwd
 ls
 
-nome_banco = $1
+nome_banco=$1
 
 echo "Iniciando backup do banco ${nome_banco}"
