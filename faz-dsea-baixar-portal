@@ -1,0 +1,2 @@
+#!/bin/sh
+rsync -Cravz --exclude=/portal_vestibular/arquivos/  www@portal.vestibular.uerj.br:/home/www/html/ /home/rafael/git/dsea/portalvestibular/html/
