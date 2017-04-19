@@ -1,2 +1,4 @@
 #!/bin/sh
+echo "iniciando rsync"
 rsync -Cravz --exclude=/portal_vestibular/arquivos/  www@portal.vestibular.uerj.br:/home/www/html/ /home/rafael/git/dsea/portalvestibular/html/
+echo "finalizando rsync"
