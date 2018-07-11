@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cd ~/mega/temp
+cd ~/temp
 mkdir bd-bck
 cd bd-bck
 pwd
