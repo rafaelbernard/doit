@@ -1,7 +1,0 @@
-#!/bin/sh
-set -o verbose # echo on
-scp ~/git/icons4u/vmsinfra/vivo/vms/prod/cache.server/varnish/default.vcl root@proxy1.p.vivo:/etc/varnish
-ssh root@proxy1.p.vivo "/etc/init.d/varnish restart"
-sleep 10
-scp ~/git/icons4u/vmsinfra/vivo/vms/prod/cache.server/varnish/default.vcl root@proxy2.p.vivo:/etc/varnish
-ssh root@proxy2.p.vivo "/etc/init.d/varnish restart"
