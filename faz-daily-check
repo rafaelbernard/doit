@@ -1,7 +1,10 @@
 #!/bin/sh
 
 aptitude_installed=$(dpkg -l aptitude)
-echo aptitude_installed
+echo $aptitude_installed
+
+err=$(dpkg -l err)
+echo $err
 
 sudo aptitude update && sudo aptitude safe-upgrade
 cat /var/run/reboot-required
