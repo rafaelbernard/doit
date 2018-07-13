@@ -7,4 +7,8 @@ err=$(dpkg -l err)
 echo $err
 
 sudo aptitude update && sudo aptitude safe-upgrade
-cat /var/run/reboot-required
+
+if [ -f /var/run/reboot-required ]
+then
+    echo "Reboot required!"
+fi
