@@ -1,14 +1,14 @@
 #!/bin/sh
 
-aptitude_installed=$(dpkg -l aptitude)
+aptitude_installed=$(-f /usr/bin/aptitude)
 echo $aptitude_installed
 
-err=$(dpkg -l err)
-echo $err
+# err=$(dpkg -l err)
+# echo $err
 
 sudo aptitude update && sudo aptitude safe-upgrade
 
 if [ -f /var/run/reboot-required ]
 then
-    echo "Reboot required!"
+    echo "\n\nReboot required!"
 fi
