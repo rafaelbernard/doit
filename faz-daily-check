@@ -1,10 +1,9 @@
 #!/bin/sh
 
-aptitude_installed=$(-f /usr/bin/aptitude)
-echo $aptitude_installed
-
-# err=$(dpkg -l err)
-# echo $err
+if ! [ -x "$(command -v aptitude)" ]; then
+  echo 'Error: aptitude is not installed. Use apt-get.'
+  exit 1
+fi
 
 sudo aptitude update && sudo aptitude safe-upgrade
 
