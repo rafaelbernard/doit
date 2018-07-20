@@ -5,6 +5,12 @@ if ! [ -x "$(command -v aptitude)" ]; then
   exit 1
 fi
 
+
+if ! [ -x "$(command -v aptituded)" ]; then
+  echo 'Error: aptituded is not installed. Use apt-get.'
+  exit 1
+fi
+
 sudo aptitude update && sudo aptitude safe-upgrade
 
 if [ -f /var/run/reboot-required ]
