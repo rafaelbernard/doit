@@ -1,17 +1,14 @@
 #!/bin/sh
 
 if ! [ -x "$(command -v aptitude)" ]; then
-  echo 'Error: aptitude is not installed. Use apt-get.'
-  exit 1
+  echo "aptitude not found. Using apt-get."
+  sudo apt-get update && sudo apt-get upgrade
+  #echo 'Error: aptitude is not installed. Use apt-get.'
+  #exit 1
+else
+  echo "aptitude found. Using aptitude."
+  sudo aptitude update && sudo aptitude safe-upgrade
 fi
-
-
-if ! [ -x "$(command -v aptituded)" ]; then
-  echo 'Error: aptituded is not installed. Use apt-get.'
-  exit 1
-fi
-
-sudo aptitude update && sudo aptitude safe-upgrade
 
 if [ -f /var/run/reboot-required ]
 then
