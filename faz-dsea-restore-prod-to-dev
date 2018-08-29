@@ -13,8 +13,8 @@ echo "renaming database dsea"
 
 echo "renaming temp prod copy to dsea"
 
-function dump() {
+function dump {
   cd /tmp
-  dumpfilename=$(date %s)
+  dumpfilename=$(date +%s)
   pg_dump -h pg.dsea.uerj.br -U rafael -F tar -f ${dumpfilename} dsea
 }
