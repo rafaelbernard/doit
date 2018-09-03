@@ -1,9 +1,9 @@
 #!/bin/sh
 
-echo "Initializing"
+echo "=> Initializing"
 
-echo "dumping"
-dump()
+echo "=> dumping"
+dump
 
 echo "restoring in dev with temp name"
 
@@ -16,5 +16,8 @@ echo "renaming temp prod copy to dsea"
 function dump {
   cd /tmp
   dumpfilename=$(date +%s)
-  pg_dump -h pg.dsea.uerj.br -U rafael -F tar -f ${dumpfilename} dsea
+  pathdumpfile="/tmp/${dumpfilename}"
+  pg_dump -v -h pg.dsea.uerj.br -U rafael -F tar -f ${pathdumpfile} dsea
+  echo "Arquivo salvo em ${pathdumpfile}"
+  cd -
 }
