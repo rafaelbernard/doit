@@ -9,18 +9,18 @@ pathdumpfile="/tmp/${dumpfilename}"
 
 dump
 
-echo "creating temp database"
+echo "=> creating temp database"
 create_temp_database
 
 dbtempname="dsea_$(date +%s)"
 
-echo "restoring in dev with temp name"
+echo "=> restoring in dev with temp name"
 
-echo "closing all connections"
+echo "=> closing all connections"
 
-echo "renaming database dsea"
+echo "=> renaming database dsea"
 
-echo "renaming temp prod copy to dsea"
+echo "=> renaming temp prod copy to dsea"
 
 function dump {
   cd /tmp
