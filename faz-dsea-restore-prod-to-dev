@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 echo "=> Initializing"
 
@@ -15,6 +15,7 @@ create_temp_database
 dbtempname="dsea_$(date +%s)"
 
 echo "=> restoring in dev with temp name"
+restore_temp_database
 
 echo "=> closing all connections"
 
@@ -26,9 +27,12 @@ function dump {
   cd /tmp
   pg_dump -v -h pg.dsea.uerj.br -U rafael -F tar -f ${pathdumpfile} dsea
   echo "Arquivo salvo em ${pathdumpfile}"
-  cd -
 }
 
 function create_temp_database {
   psql -h pgdev.dsea.uerj.br -U rafael -c "create database ${dbtempname}"
+}
+
+function restore_temp_database {
+  
 }
