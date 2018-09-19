@@ -10,9 +10,9 @@ pathdumpfile="/tmp/${dumpfilename}"
 dump
 
 echo "=> creating temp database"
-create_temp_database
 
 dbtempname="dsea_$(date +%s)"
+create_temp_database
 
 echo "=> restoring in dev with temp name"
 restore_temp_database
@@ -26,7 +26,7 @@ echo "=> renaming temp prod copy to dsea"
 function dump {
   cd /tmp
   pg_dump -v -h pg.dsea.uerj.br -U rafael -F tar -f ${pathdumpfile} dsea
-  echo "Arquivo salvo em ${pathdumpfile}"
+  echo "Arquivo salvo em $pathdumpfile"
 }
 
 function create_temp_database {
@@ -34,5 +34,5 @@ function create_temp_database {
 }
 
 function restore_temp_database {
-  
+
 }
