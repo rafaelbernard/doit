@@ -1,0 +1,9 @@
+#/bin/bash
+
+echo "aptitude"
+
+sudo apt-get install -y aptitude
+
+echo "Installing git"
+
+sudo aptitude install -y git
