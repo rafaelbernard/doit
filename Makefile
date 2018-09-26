@@ -3,7 +3,7 @@
 # PREFIX to whatever you have renamed the main command to.
 #
 
-PREFIX = faz
+PREFIX = doit
 
 #
 # Where to install the tools
