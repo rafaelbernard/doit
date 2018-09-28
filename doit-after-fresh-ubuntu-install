@@ -11,3 +11,7 @@ sudo aptitude install -y git
 echo "medias and extras"
 
 sudo aptitude install -y ubuntu-restricted-extras vlc
+
+echo "dev tools"
+
+sudo aptitude install -y httpie

@@ -1,5 +1,0 @@
-#!/usr/bin/sh
-
-echo "Diretório"
-pwd
-git pull
