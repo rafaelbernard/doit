@@ -1,5 +1,9 @@
 #!/bin/sh
 
+echo "Network usage"
+
+doit network-usage-report
+
 if ! [ -x "$(command -v aptitude)" ]; then
   echo "aptitude not found. Using apt-get."
   sudo apt-get update && sudo apt-get upgrade
