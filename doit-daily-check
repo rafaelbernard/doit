@@ -19,7 +19,7 @@ then
     echo "\n\nReboot required!"
 fi
 
-sleep(2)
+#sleep(2)
 
 echo "verifying snap updates"
 sudo snap refresh
