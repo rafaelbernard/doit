@@ -4,6 +4,8 @@ echo "Network usage"
 
 doit network-usage-report
 
+sleep 2
+
 if ! [ -x "$(command -v aptitude)" ]; then
   echo "aptitude not found. Using apt-get."
   sudo apt-get update && sudo apt-get upgrade
@@ -19,7 +21,7 @@ then
     echo "\n\nReboot required!"
 fi
 
-#sleep(2)
+sleep 2
 
 echo "verifying snap updates"
 sudo snap refresh
