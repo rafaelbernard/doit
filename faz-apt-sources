@@ -1,9 +1,0 @@
-#!/bin/sh
-
-release = $('cat /etc/lsb-release | grep "CODENAME"')
-echo 'release: '
-echo release
-
-cd /etc/apt/sources.list.d/
-ls -la
-ack-grep 'xenial'
