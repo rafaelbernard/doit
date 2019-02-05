@@ -1,8 +1,13 @@
 #!/bin/sh
+# my daily check routine
 
 echo "Network usage"
 
-doit network-usage-report
+if ! [ -x "$(command -v vnstat)" ]; then
+  echo "vnstat not found. Skiping network usage."
+else
+  doit network-usage-report
+fi
 
 sleep 2
 
