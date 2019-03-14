@@ -30,3 +30,8 @@ sleep 2
 
 echo "verifying snap updates"
 sudo snap refresh
+
+# showing my dotfiles status
+cd ~/git/pessoal/rc.d
+git status
+cd -
