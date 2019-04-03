@@ -21,12 +21,16 @@ else
   sudo aptitude update && sudo aptitude safe-upgrade
 fi
 
+sleep 2
+
+echo "# Verifying snap updates"
+sudo snap refresh
+
+echo "# Verifying firmware updates"
+sudo fwupdmgr refresh && sudo fwupdmgr update
+
 if [ -f /var/run/reboot-required ]
 then
     echo "\n\nReboot required!"
 fi
 
-sleep 2
-
-echo "verifying snap updates"
-sudo snap refresh
