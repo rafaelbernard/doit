@@ -1,4 +1,5 @@
-#/bin/bash
+#!/usr/bin/env bash
+set -x
 
 echo "aptitude"
 
@@ -15,3 +16,6 @@ sudo aptitude install -y ubuntu-restricted-extras vlc
 echo "dev tools"
 
 sudo aptitude install -y httpie
+
+echo "laptop"
+sudo aptitude install -y laptop-mode-tools
