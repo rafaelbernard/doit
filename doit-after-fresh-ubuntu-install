@@ -17,5 +17,10 @@ echo "dev tools"
 
 sudo aptitude install -y httpie
 
-echo "laptop"
-sudo aptitude install -y laptop-mode-tools
+# For laptops
+# todo - check
+
+#echo "laptop-mode-tools"
+#sudo aptitude install -y laptop-mode-tools
+
+sudo aptitude install -y tlp tlp-rdw tp-smapi-dkms acpi-call-dkms thermald
