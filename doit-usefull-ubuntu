@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+set -x
+
+echo "aptitude"
+
+sudo apt-get install -y aptitude
+
+echo "Installing git"
+
+sudo aptitude install -y git
+
+echo "medias and extras"
+
+sudo aptitude install -y ubuntu-restricted-extras vlc
+
+echo "dev tools"
+
+sudo aptitude install -y httpie
+
+# For laptops
+# todo - check
+
+#echo "laptop-mode-tools"
+
+sudo aptitude install -y tlp tlp-rdw tp-smapi-dkms acpi-call-dkms thermald
