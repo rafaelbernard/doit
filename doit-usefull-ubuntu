@@ -5,9 +5,9 @@ echo "aptitude"
 
 sudo apt-get install -y aptitude
 
-echo "Installing git"
+echo "Installing utils"
 
-sudo aptitude install -y git
+sudo aptitude install -y default-jdk
 
 echo "medias and extras"
 
@@ -15,12 +15,11 @@ sudo aptitude install -y ubuntu-restricted-extras vlc
 
 echo "dev tools"
 
-sudo aptitude install -y httpie
+sudo aptitude install -y httpie git
 
 # For laptops
 # todo - check
 
-#echo "laptop-mode-tools"
-#sudo aptitude install -y laptop-mode-tools
+echo "laptops"
 
 sudo aptitude install -y tlp tlp-rdw tp-smapi-dkms acpi-call-dkms thermald
