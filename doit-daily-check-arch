@@ -1,0 +1,11 @@
+#!/usr/bin/env /bin/bash
+# my daily check routine
+
+echo "pacman update"
+sudo pacman -Syu
+
+# showing my dotfiles status
+cd ~/git/pessoal/rc.d
+git status
+cd -
+
