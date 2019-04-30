@@ -30,7 +30,7 @@ echo "# Verifying firmware updates"
 sudo fwupdmgr refresh && sudo fwupdmgr update
 
 # showing my dotfiles status
-cd ~/git/pessoal/rc.d
+cd ~/git/pessoal/dotfiles
 git status
 cd -
 
