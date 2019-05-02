@@ -1,6 +1,11 @@
 #!/usr/bin/env /bin/bash
 # my daily check routine
 
+CMD="sudo doit update"
+echo "doit update"
+echo $CMD
+eval $CMD
+
 echo "pacman update"
 sudo pacman -Syu
 
