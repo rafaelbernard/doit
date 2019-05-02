@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -x
+
+# Window manager
+sudo pacman -Sy i3 i3lock
+
+# Utils
+sudo pacman -Sy parcellite imagemagick scort
