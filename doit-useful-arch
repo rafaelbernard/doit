@@ -4,5 +4,8 @@ set -x
 # Window manager
 sudo pacman -Sy i3 i3lock
 
+# Essentials
+sudo pacman -Sy zsh fzf git ssh
+
 # Utils
 sudo pacman -Sy parcellite imagemagick scort
