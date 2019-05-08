@@ -5,6 +5,10 @@ echo "aptitude"
 
 sudo apt-get install -y aptitude
 
+echo "tools"
+
+sudo aptitude install -y tmux kitty zsh
+
 echo "Installing utils"
 
 sudo aptitude install -y default-jdk

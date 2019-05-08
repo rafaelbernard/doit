@@ -4,5 +4,9 @@ set -x
 # Window manager
 sudo pacman -Sy i3 i3lock
 
+# tools
+
+sudo pacman -Sy tmux kitty zsh
+
 # Utils
 sudo pacman -Sy parcellite imagemagick scort
