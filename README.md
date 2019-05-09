@@ -33,7 +33,7 @@ Updated tools to 01ec2ef (2016-03-30 16:20:30 -0700)
 
 Some scripts can be run directly, without cloning the repo:
 
-1. Useful ubuntu: `wget -o https://raw.githubusercontent.com/rafaelbernard/doit/master/doit-useful-ubuntu | sudo bash`
+1. Useful ubuntu: `wget https://raw.githubusercontent.com/rafaelbernard/doit/master/doit-useful-ubuntu -O - | sudo bash`
 
 ## Links
 
