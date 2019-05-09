@@ -5,6 +5,14 @@ echo "aptitude"
 
 sudo apt-get install -y aptitude
 
+echo "essentials"
+
+sudo aptitude install -y ssh
+
+echo "dev tools"
+
+sudo aptitude install -y httpie git
+
 echo "tools"
 
 sudo aptitude install -y tmux kitty zsh
@@ -16,10 +24,6 @@ sudo aptitude install -y default-jdk
 echo "medias and extras"
 
 sudo aptitude install -y ubuntu-restricted-extras vlc
-
-echo "dev tools"
-
-sudo aptitude install -y httpie git
 
 # For laptops
 # todo - check
