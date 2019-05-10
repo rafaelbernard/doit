@@ -9,7 +9,7 @@ else
   doit network-usage-report
 fi
 
-sleep 2
+echo "package updates"
 
 if ! [ -x "$(command -v aptitude)" ]; then
   echo "aptitude not found. Using apt-get."
@@ -29,8 +29,11 @@ sudo snap refresh
 echo "# Verifying firmware updates"
 sudo fwupdmgr refresh && sudo fwupdmgr update
 
+echo "dotfiles"
+
 # showing my dotfiles status
-cd ~/git/pessoal/dotfiles
+cd ~/.dotfiles
+git pull
 git status
 cd -
 
