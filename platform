@@ -1,8 +1,7 @@
 #!/bin/bash
-# vi:set tabspaces=8
 #set -x
 
-echo "Installing dotfiles"
+echo "Checking platform"
 
 # =========================
 # PLATFORM
@@ -36,3 +35,4 @@ export hostname=`hostname -s`
 
 # }}}
 
+# vi: tabspace=8

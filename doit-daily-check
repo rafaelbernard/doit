@@ -1,6 +1,8 @@
 #!/bin/sh
 # my daily check routine
 
+source platform
+
 echo "Network usage"
 
 if ! [ -x "$(command -v vnstat)" ]; then
@@ -10,6 +12,8 @@ else
 fi
 
 echo "package updates"
+
+echo "Platform $platform"
 
 if ! [ -x "$(command -v aptitude)" ]; then
   echo "aptitude not found. Using apt-get."
@@ -28,14 +32,6 @@ sudo snap refresh
 
 echo "# Verifying firmware updates"
 sudo fwupdmgr refresh && sudo fwupdmgr update
-
-echo "dotfiles"
-
-# showing my dotfiles status
-cd ~/.dotfiles
-git pull
-git status
-cd -
 
 if [ -f /var/run/reboot-required ]
 then
